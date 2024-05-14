@@ -1,22 +1,9 @@
 @startuml
-'https://plantuml.com/use-case-diagram
-
-:Main Admin: as Admin
-(Use the application) as (Use)
-edi-->(starteaza uml)
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Use)
-
-note right of Admin : This is an example.
-
-note right of (Use)
-A note can also
-be on several lines
-end note
-
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
+utilizatorul ....>(Aplicatia afiseaza un formular care contine 4 casute in care utilizatorul isi introduce in prima casuta numarul de telefon, In a 2 casuta numele complet, in a 3 casuta username si in a 4 casuta o parola):face click pe butonul de register 
+utilizatorul -up->(daca nu o introduce corect parola si username atunci aplicatia va trimite un mesaj sa notifice utilizatorul): introduce url
+utilizatorul -up---->(se afiseaza landing page-ul aplicatiei care contine casuta in care utilizatorul isi introduce username si inca o casuta in care utilizatorul introduce parola, buton cu register, un buton de login, un boton de help):introduce url
+utilizatorul -left->(se afiseaza o fereastra in care sunt afisate steagurile tuturor tarilor si sub ele evident tara subliniata): daca o introduce corect
+utilizatorul -down->(aplicatia va deschide o fereastra in care utilizatorul va efectua o anumita plata in functie de tara aleasa):alege tara
+utilizatorul -right-->(aplicatia va notifica utilizatorul): nu face corect plata
+utilizatorul -->(aplicatia va deschide o fereastra cu harta tarii respective impartita pe zonele de turism): face corect plata
 @enduml
