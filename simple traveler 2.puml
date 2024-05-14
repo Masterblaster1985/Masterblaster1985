@@ -1,0 +1,11 @@
+@startuml
+utilizatorul-up------>(se afiseaza landing page-ul aplicatiei):introduce url in tabul din browser
+utilizatorul-up....>(aplicatia afiseaza o fereastra in care se se gasesc 2 butoane in mijlocul paginii):da click pe SIMPLE TRAVELER
+utilizatorul-up---->(aplicatia afiseaza o noua fereastra care contine 6 casute):apasa NEW ACCOUNT
+utilizatorul-up...>(aplicatia va afisa in culoarea rosie casuta de parola):nu introduce o parola care sa contina cel putin 7 litere, 3 cifre si 3 semne de punctuatie
+utilizatorul-up-->(aplicatia il va notifica ingrosand cu culoare rosie casuta de parola):apasa butonul de register
+utilizatorul-up.>(aplicatia va trimite un e-mail utilizatorului in care il va notifica ca poate intra in cont):completeaza bine parola
+utilizatorul-right------>(aplicatia afiseaza 2 casute prima cu Adresa de email / Numar de telefon si a 2 cu parola si un buton de login):apasa pe butonul AUTENTIFICATION
+utilizatorul-right.....>(atunci aplicatia arata un mesaj cu rosu zicand ca Hm... Utilizatorul sau parola? Ceva nu corespunde :( si nu permite accesul in aplicatie):nu introduce bine numarul de telefon sau e-mailul corespunzator cu care s-a inscris sau nu pune parola corespunzatoare
+utilizatorul-down---->(aplicatia ii va permite acestuia logarea):introduce bine Adresa de email / Numar de telefon si parola si apasa butonul de login
+@enduml
