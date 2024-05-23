@@ -3,10 +3,11 @@ utilizatorul-up----->(aplicatia deschide o fereastra in care sunt dispuse steagu
 utilizatorul-up....>(aplicatia deschide o noua fereastra in care utilizatorul va efectua o anumita plata in functie de tara aleasa cu cardul bancar):face click pe o tara
 utilizatorul-up--->(aplicatia notifica utilizatorul incadrand in rosu casuta cu problema):nu introduce numarul cardului bine sau data si luna de expirare bine sau security codul bine sau numele titularului bine
 utilizatorul-up..>(aplicatia va deschide o noua fereastra cu harta tarii respective impartita pe zonele de turism):Daca utilizatorul introduce toate datele bine si apasa butonul payment
-utilizatorul-up..>(plata va fi dedusa de pe cardul de credit/debit):Daca utilizatorul introduce toate datele bine si apasa butonul payment
+utilizatorul-up..>payment_service :conectare
+payment_service-->(verific mesaj de la payment service)
 utilizatorul-down----->(aplicatia il va redirectiona spre o pagina wikipedia cu date relevante istorice, date despre populatie, turism, economie industrie..etc despre tara respectiva):da click pe chenarul cu numele tarii
 utilizatorul-down....>(aplicatia va pune la dispozitia utilizatorului o paleta de 100 de limbi):apasa pe butonul “english”
 utilizatorul-down--->(aplicatia va afisa timpul cel mai bun de vizitare al tarii si cand este de evitat(de ex uragane, ploaie musonica, foarte cald sau foarte frig etc..):apasa butonul BEST VISITING TIME
 utilizatorul-down..>(zona se va “albastrii”):merge cu cursorul mouseului peste o anumita zona
 utilizatorul-down->(aplicatia va deschide intr-o noua fereastra o harta a zonei in care se vor afisa orasele principale precum si orase mai mici care au legatura cu partea turistica, se vor afisa si obiectivele turistice precum pesteri, cascade, saline, oaze, zone de agrement, lacuri, zona de tiroliana etc., se vor afisa rutele intre orasele mai mari si cele mai mici precum si rutele intre obiectivele turistice si orase):face click pe o anumita zona
-@enduml
+@endulm
