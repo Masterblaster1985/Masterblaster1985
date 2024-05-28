@@ -1,0 +1,15 @@
+@startuml
+utilizatorul-up------>(aplicatia va deschide intr-o noua fereastra o harta interactiva a zonei):face click pe o anumita zona
+utilizatorul-up.....>(aplicatia va roti orasul si il va evidentia):trece cu cursorul mouseului peste oricare oras ce apare in zona
+utilizatorul-up---->(aplicatia il va evidentia):trece cu mouseul peste un obiectiv turistic
+utilizatorul-up...>(aplicatia va transforma mouseul intr-un trenulet - simbolistica calatoriei):trece cu mouseul peste o ruta intre oras si obiectiv sau oras mai mare si oras mai mic sau intre 2 obiective turistice
+utilizatorul-up-->(aplicatia deschide o noua fereastra in care se va face o descriere pe scurt a obiectivuluisi sa o arate utilizatorului):apasa pe obiectivul din harta zonei respective
+utilizatorul-up.>(aplicatia va afisa o noua fereastra in care ii pune la dispozitia utilizatorului modalitatea de a parcurge acea ruta pe jos, cu trenul, cu masina, taxi, uber etc):apasa pe o anumita ruta din harta zonei
+utilizatorul-down------>(ii va afisa utilizatorului timpul de parcurgere cu fiecare mijloc de transport, aplicatia va sugera care este cel mai optim mod de a parcurge aceasta ruta, orarul fiecarui mijloc de transport, timpul pentru fiecare mijloc de transport, pretul, contactul fiecarui transportator etc.):apasa pe o anumita ruta din harta zonei
+utilizatorul-down.....>(aplicatia va deschide o harta separata a orasului avand obiectivele turistice pe harta dispuse tot interactiv ca si pe harta zonei):da click pe oras
+utilizatorul-down---->(aplicatia va afisa sub forma de butoane unu sub altul scurta istorie a orasului, meteo oras, cazare, suveniruri,mancare locala): apasa butonul chenar din dreapta sus
+utilizatorul-down...>(va afisa sub forma de butoane unu sub altul timpul de vizita al orasului +-, rutele din oras (sa apara cele mai importante obiective legate intre ele pe zile): apasa butonul din stanga sus
+utilizatorul-down-->(aplicatia va afisa o noua fereastra in care ii pune la dispozitia utilizatorului modalitatea de a parcurge acea ruta(pe jos, cu metroul, firobuz, autobuz, monorail, cu masina, taxi, uber etc):apasa pe o anumita ruta din oras
+utilizatorul-down.>(ii va afisa utilizatorului timpul de parcurgere cu fiecare mijloc de transport, aplicatia va sugera care este cel mai optim mod de a parcurge aceasta ruta, orarul fiecarui mijloc de transport, timpul pentru fiecare mijloc de transport, pretul):apasa pe o anumita ruta din oras
+utilizatorul-left-------->(aplicatia deschide o noua fereastra in care se va face o descriere pe scurt a obiectivului si sa o arate utilizatorului –pretul de intrare, descriere, poze, orar, contact,):apasa pe obiectivul respectiv din oras
+@enduml
