@@ -1,0 +1,45 @@
+@startuml
+class utilizatorul {}
+class url {}
+class tab_din_browser {}
+class landing_page {}
+tab_din_browser..>url
+class simple_traveler {}
+class fereastra {}
+class buton {}
+class mijlocul_paginii {}
+class fundalul_paginii {}
+class puncte_de_atractie {}
+class marele_zid_chinezesc {}
+class turnul_eiffel {}
+class colosseum {}
+class empire_state_building {}
+class parc_safari {}
+class capitol_building {}
+class palat_imperial_tokyo {}
+class machu_picchu {}
+class autentification {}
+class new_account {}
+class dimensiunea {}
+fereastra..>buton
+fundalul_paginii..>punct_de_atractie
+class noua_fereastra {}
+class casuta {}
+class buton_de_register {}
+class e_mail {}
+class parola {}
+class prenume {}
+class nume {}
+class data_nasterii {}
+class sex {}
+class combinatie {}
+class semne_de_punctuatie {}
+noua_fereastra..>casuta
+noua_fereastra..>buton_de_register
+casuta-->e_mail
+casuta-->parola
+casuta-->prenume
+casuta-->nume
+casuta-->data_nasterii
+casuta-->sex
+@enduml
