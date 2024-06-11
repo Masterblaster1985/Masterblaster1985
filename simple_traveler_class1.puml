@@ -1,0 +1,73 @@
+@startuml
+title edi's diagram
+
+class utilizator {}
+class buton_autentification {}
+class fereastra_login {
+label
+verifica casuta si buton de login()
+}
+class casuta_adresa_email_numar_telefon {
+label
+verifica adresa de mail/numar de telefon()
+}
+class casuta_de_parola {
+label
+verifica parola()
+}
+class buton_de_login {
+label
+(verifica logarea)
+}
+utilizator - buton_autentification : apasa >
+fereastra_login "1"*--- "1" casuta_adresa_email_numar_telefon
+fereastra_login "1"*--- "1" casuta_de_parola
+fereastra_login "1"*--- "1" buton_de_login
+
+class utilizator {}
+class numar_de_telefon {}
+class e-mail {}
+class parola {}
+class mesaj {}
+
+class utilizator {}
+class e-mail {}
+class numar_de_telefon {}
+class fereastra_principala {
+title_
+verifica steagurile()
+}
+class steag {
+culoare
+verifica culoarea()
+}
+class tara {
+nume
+verifica_numele_tarii()
+}
+class ordine_alfabetica {
+litere
+verifica_primele_trei_litere()
+
+}
+class stanga {}
+class dreapta {}
+class limba_engleza {}
+fereastra_principala "1"*--- "193..*"steag
+fereastra_principala --- ordine_alfabetica : afisare >
+steag ---> stanga : sa fie pozitionat >
+steag ---> dreapta : sa fie pozitionat >
+tara --- limba_engleza : scris >
+steag "1"*--- "1"tara
+
+class bara_de_scroll {
+afisare intr-o parte
+scroll pagina()
+}
+class cursor_mouse {}
+class avion {}
+fereastra_principala "1"*---"1" bara_de_scroll
+cursor_mouse - avion :> se transforma
+
+
+@enduml
