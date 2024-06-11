@@ -1,12 +1,8 @@
 @startuml
 class utilizatorul {}
-class url {}
-class tab_din_browser {}
 class landing_page {}
-tab_din_browser..>url
 class simple_traveler {}
-class fereastra {}
-class buton {}
+class fereastra_login_register {}
 class mijlocul_paginii {}
 class fundalul_paginii {}
 class puncte_de_atractie {}
@@ -19,27 +15,40 @@ class capitol_building {}
 class palat_imperial_tokyo {}
 class machu_picchu {}
 class autentification {}
-class new_account {}
+class buton_new_account {}
 class dimensiunea {}
-fereastra..>buton
+fereastra_login_register..buton_new_account
 fundalul_paginii..>punct_de_atractie
+class label_cu_numele_casutei
+class sir_de_caractere
 class noua_fereastra {}
 class casuta {}
 class buton_de_register {}
-class e_mail {}
-class parola {}
+class e_mail {
+xxxyyy@yahoo.com zzzttt@gmail.com
+verifica_sir_caractere@domeniu.com()
+
+}
+class parola {
+label
+verifica_sir_caractere()
+}
 class prenume {}
 class nume {}
 class data_nasterii {}
-class sex {}
+class sex {
+masculin,feminin
+verifica_sex()
+}
 class combinatie {}
 class semne_de_punctuatie {}
-noua_fereastra..>casuta
-noua_fereastra..>buton_de_register
-casuta-->e_mail
-casuta-->parola
-casuta-->prenume
-casuta-->nume
-casuta-->data_nasterii
-casuta-->sex
+sir_de_caractere..casuta
+noua_fereastra..casuta
+noua_fereastra..buton_de_register
+casuta -- e_mail
+casuta -- parola
+casuta -- prenume
+casuta -- nume
+casuta -- data_nasterii
+casuta -- sex
 @enduml
