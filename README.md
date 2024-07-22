@@ -1,1 +1,1 @@
-
+Daca utilizatorul introduce toate datele bine si apasa butonul payment atunci plata va fi dedusa de pe cardul de credit/debit prin intermediul serviciului extern de payment si aplicatia va deschide o fereastra”harta tarii” ce contine tara respectiva impartita pe zonele de turism ca ex harta Malaeziei impartita pe zone precum Johor, Malacca, Pahang, Selangor, Perak, Kelantan, Penang, Terengganu, Kedah, Sarawak, Sabah 
