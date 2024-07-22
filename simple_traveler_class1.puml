@@ -128,31 +128,94 @@ tara "1" *--- "1" dimensiune
 tara "1" *--- "1" nume_tara
 
 class fereastra_harta_tarii {
-
+nume fereastra
+afiseaza_nume_fereastra()
 }
-class harta_tarii {}
-class harta_Romaniei {}
-class zona_de_turism_banat {}
-class zona_de_turism_transilvania {}
-class oras_reprezentativ {}
-class oras_Timisoara {}
-class oras_Resita {}
-class oras_Cluj_Napoca {}
-class oras_Brasov
-class oras_Sibiu {}
+class Malaezia {
+nume_tara
+afiseaza_nume_tara()
+}
+class Johor {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Malacca {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+class Pahang {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+class Selangor {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Perak {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Kelantan {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Penang {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Terengganu {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Kedah {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Sarawak {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Class Sabah {
+nume_zona
+dimensiune
+arata_nume_zona()
+afiseaza_dimensiunea()
+}
+Malaezia "1" *--- "1" Johor
+Malaezia "1" *--- "1" Malacca
+Malaezia "1" *--- "1" Pahang
+Malaezia "1" *--- "1" Selangor
+Malaezia "1" *--- "1" Perak
+Malaezia "1" *--- "1" Kelantan
+Malaezia "1" *--- "1" Penang
+Malaezia "1" *--- "1" Terengganu
+Malaezia "1" *--- "1" Kedah
+Malaezia "1" *--- "1" Sarawak
+Malaezia "1" *--- "1" Sabah
 
 buton_payment ... fereastra_harta_tarii : afiseaza >
 fereastra_harta_tarii "1"*---"1" harta_tarii
-harta_tarii "1" *--- "3" zona_de_turism
-harta_Romaniei "1" *--- "1" zona_de_turism_banat
-harta_Romaniei "1" *--- "1" zona_de_turism_transilvania
 
-zona_de_turism "1" *--- "1..*" oras_reprezentativ
-zona_de_turism_banat "1" *--- "1" oras_Timisoara
-zona_de_turism_banat "1" *--- "1" oras_Resita
-zona_de_turism_transilvania "1" *--- "1" oras_Cluj_Napoca
-zona_de_turism_transilvania "1" *--- "1" oras_Brasov
-zona_de_turism_transilvania "1" *--- "1" oras_Sibiu
 
 
 
