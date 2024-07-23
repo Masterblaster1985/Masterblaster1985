@@ -214,9 +214,45 @@ Malaezia "1" *--- "1" Sarawak
 Malaezia "1" *--- "1" Sabah
 
 buton_payment ... fereastra_harta_tarii : afiseaza >
-fereastra_harta_tarii "1"*---"1" harta_tarii
-
-
-
+class chenar_buton_numele_tarii {
+nume_buton
+dimensiune_buton
+afiseaza_nume_buton ()
+arata_dimensiunea ()
+click ()
+}
+class pagina_wikipedia {}
+class chenar_buton_language {
+nume_buton
+dimensiune_buton
+limba
+afiseaza_nume_buton ()
+arata_dimensiunea ()
+afiseaza_limba ()
+click ()
+}
+class chenar_buton_best_visiting_time {
+nume_buton
+dimensiune_buton
+afiseaza_nume_buton ()
+arata_dimensiunea ()
+click ()
+}
+class timpul_cel_mai_bun_de_vizitare {
+sezonul_de vizita
+afiseaza_cel_mai_bun_timp_de_vizitare ()
+}
+class fereastra_best_visting_time {
+nume_fereastra
+afiseaza_nume_fereastra ()
+}
+class timp_de_evitat {
+sezonul_de vizita
+afiseaza_cel_mai_bun_timp_de_evitat ()
+}
+fereastra_harta_tarii "1" *--- "1" chenar_buton_numele_tarii : partea_dreapta_sus
+fereastra_harta_tarii "1" *--- "1" chenar_buton_language : partea_stanga_sus
+fereastra_harta_tarii "1" *--- "1" chenar_buton_best_visiting_time : centru_sus
+chenar_buton_best_visiting_time ---|> fereastra_best_visting_time : click
 
 @enduml
