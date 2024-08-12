@@ -87,7 +87,10 @@ class cost_predefinit {
 cost
 afiseaza_costul()
 }
-class zona_de_turism {}
+class zona_de_turism {
+nume_zona_de_turism
+afiseaza_nume_zona_de_turism ()
+}
 class casuta_card_bancar {
 nume
 dimensiunea
@@ -131,188 +134,33 @@ class fereastra_harta_tarii {
 nume fereastra
 afiseaza_nume_fereastra()
 }
-class Malaezia {
+class harta_tarii {
 nume_tara
-afiseaza_nume_tara()
+afiseaza_nume_tara ()
 }
-class Johor {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Malacca {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-class Pahang {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-class Selangor {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Perak {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Kelantan {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Penang {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Terengganu {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Kedah {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Sarawak {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Class Sabah {
-nume_zona
-dimensiune
-arata_nume_zona()
-afiseaza_dimensiunea()
-}
-Malaezia "1" *--- "1" Johor
-Malaezia "1" *--- "1" Malacca
-Malaezia "1" *--- "1" Pahang
-Malaezia "1" *--- "1" Selangor
-Malaezia "1" *--- "1" Perak
-Malaezia "1" *--- "1" Kelantan
-Malaezia "1" *--- "1" Penang
-Malaezia "1" *--- "1" Terengganu
-Malaezia "1" *--- "1" Kedah
-Malaezia "1" *--- "1" Sarawak
-Malaezia "1" *--- "1" Sabah
+fereastra_harta_tarii "1" *--- "1" harta_tarii
+harta_tarii "1" *--- "1..*" zona_de_turism
 
-buton_payment ... fereastra_harta_tarii : afiseaza >
 class chenar_buton_numele_tarii {
-nume_buton
-dimensiune_buton
-afiseaza_nume_buton ()
-arata_dimensiunea ()
+dimensiune
+afiseaza_dimensiunea ()
 click ()
 }
-class pagina_wikipedia {}
 class chenar_buton_language {
-nume_buton
-dimensiune_buton
+dimensiune
 limba
-afiseaza_nume_buton ()
-arata_dimensiunea ()
+afiseaza dimensiunea ()
 afiseaza_limba ()
-click ()
 }
 class chenar_buton_best_visiting_time {
-nume_buton
-dimensiune_buton
-afiseaza_nume_buton ()
-arata_dimensiunea ()
-click ()
-}
-class timpul_cel_mai_bun_de_vizitare {
-sezonul_de vizita
-afiseaza_cel_mai_bun_timp_de_vizitare ()
-}
-class fereastra_best_visting_time {
-nume_fereastra
-afiseaza_nume_fereastra ()
-}
-class timp_de_evitat {
-sezonul_de vizita
-afiseaza_cel_mai_bun_timp_de_evitat ()
-}
-fereastra_harta_tarii "1" *--- "1" chenar_buton_numele_tarii : partea_dreapta_sus
-fereastra_harta_tarii "1" *--- "1" chenar_buton_language : partea_stanga_sus
-fereastra_harta_tarii "1" *--- "1" chenar_buton_best_visiting_time : centru_sus
-chenar_buton_best_visiting_time ---|> fereastra_best_visting_time : click
-
-class fereastra_harta_interactiva_a_zonei {
-nume_fereastra
-afiseaza_nume_fereastra ()
-}
-class harta_interactiva_a_zonei {
 dimensiune
-afiseaza_dimensiunea ()
+timp_de_vizita
+afiseaza_dimensiune ()
+afiseaza_timp_de_vizita ()
 }
-class obiectiv_turistic {
-monument
-pestera
-templu
-cascada
-parc_national
-castel
-landmark
-cladire
-zona_de_agrement
-afiseaza_monument ()
-afiseaza_pestera ()
-afiseaza_templu ()
-afiseaza_cascada ()
-afiseaza_parc_national ()
-afiseaza_castel ()
-afiseaza_landmark ()
-afiseaza_cladire ()
-afiseaza_zona_de_agrement ()
-}
-class oras_principal_mare {
-dimensiunea
-afiseaza_dimensiunea ()
-}
-class oras_mic {
-dimensiunea
-afiseaza_dimensiunea ()
-}
-class rute_turistice {
-dimensiunea
-culoare
-afiseaza_dimensiunea ()
-afiseaza_culoarea ()
-}
-class lac {
-dimensiunea
-afiseaza_dimensiunea ()
-}
-class mare {
-dimensiunea
-afiseaza_dimensiunea ()
-}
-fereastra_harta_interactiva_a_zonei "1" *--- "1" harta_interactiva_a_zonei
-harta_interactiva_a_zonei "1" *--- "1..*" obiectiv_turistic
-harta_interactiva_a_zonei "1" *--- "1" oras_principal_mare
-harta_interactiva_a_zonei "1" *--- "0..*" oras_mic
-harta_interactiva_a_zonei "1" *--- "1..*" rute_turistice
-harta_interactiva_a_zonei "1" *--- "0..*" lac
-harta_interactiva_a_zonei "1" *--- "0..*" mare
-
+fereastra_harta_tarii "1" *--- "1" chenar_buton_numele_tarii
+fereastra_harta_tarii "1" *--- "1" chenar_buton_language
+fereastra_harta_tarii "1" *--- "1" chenar_buton_best_visiting_time
 
 
 @enduml
