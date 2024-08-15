@@ -1,9 +1,0 @@
-@startuml
-class utilizator {}
-class limba
-class mesaj {}
-class continut {}
-text selecteaza limba
-'class text_selecteaza_limba {}
-'prima_pagina .. text_selecteaza_limba
-@enduml
