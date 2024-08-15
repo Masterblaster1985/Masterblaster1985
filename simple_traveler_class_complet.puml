@@ -1,0 +1,174 @@
+@startuml
+title edi's diagram
+
+class utilizator {}
+class buton_autentification {}
+class fereastra_login {
+label
+verifica casuta si buton de login()
+}
+class casuta_adresa_email_numar_telefon {
+label
+verifica adresa de mail/numar de telefon()
+}
+class casuta_de_parola {
+label
+verifica parola()
+}
+class buton_de_login {
+label
+(verifica logarea)
+}
+
+fereastra_login "1"*--- "1" casuta_adresa_email_numar_telefon
+fereastra_login "1"*--- "1" casuta_de_parola
+fereastra_login "1"*--- "1" buton_de_login
+
+class utilizator {}
+class numar_de_telefon {}
+class e-mail {}
+class parola {}
+class mesaj {}
+
+class utilizator {}
+class e-mail {}
+class numar_de_telefon {}
+class fereastra_principala {
+title_
+afiseaza steagurile()
+}
+class steag {
+culoare
+afiseaza culoarea()
+}
+class nume_tara {
+nume
+afiseaza_numele_tarii()
+}
+class tara {
+}
+class ordine_alfabetica {
+litere
+verifica_primele_trei_litere()
+
+}
+class stanga {}
+class dreapta {}
+class limba_engleza {}
+fereastra_principala "1"*--- "193..*"steag
+fereastra_principala --- ordine_alfabetica : afisare >
+steag ---> stanga : sa fie pozitionat >
+steag ---> dreapta : sa fie pozitionat >
+tara --- limba_engleza : scris >
+steag "1"*--- "1"tara
+
+class bara_de_scroll {
+afisare intr-o parte
+scroll pagina()
+}
+class cursor_mouse {}
+class avion {}
+fereastra_principala "1"*---"1" bara_de_scroll
+cursor_mouse - avion :> se transforma
+
+class fereastra_payment {
+nume_fereastra
+casuta
+afiseaza_casute()
+afiseaza_nume_fereastra()
+}
+class plata {}
+class dimensiune {
+lungime_x_latime
+arata_suprafata()
+}
+class card_bancar {}
+class cost_predefinit {
+cost
+afiseaza_costul()
+}
+class zona_de_turism {
+nume_zona
+afiseaza_nume_zona ()
+}
+class casuta_card_bancar {
+nume
+dimensiunea
+afiseaza_nume_casuta()
+arata_dimensiunea()
+}
+class casuta_data_si_luna_de_expirare {
+nume
+dimensiunea
+afiseaza_nume_casuta()
+arata_dimensiunea()
+}
+class casuta_security_code {
+nume
+dimensiunea
+afiseaza_nume_casuta()
+arata_dimensiunea()
+}
+class casuta_numele_titularului {
+nume
+dimensiunea
+afiseaza_nume_casuta()
+arata_dimensiunea()
+}
+class buton_payment {
+
+click()
+}
+
+fereastra_payment "1" *-- "1" casuta_card_bancar
+fereastra_payment "1" *--- "1" casuta_data_si_luna_de_expirare
+fereastra_payment "1" *---- "1" casuta_security_code
+fereastra_payment "1" *---- "1" casuta_numele_titularului
+fereastra_payment "1" *--- "1" buton_payment
+tara "1" *--- "3" zona_de_turism
+tara "1" *--- "1" cost_predefinit
+tara "1" *--- "1" dimensiune
+tara "1" *--- "1" nume_tara
+
+class fereastra_harta_tarii {
+nume fereastra
+afiseaza_nume_fereastra()
+}
+class harta_tarii {
+dimensiunea
+zona_de_turism
+afiseaza_dimensiunea ()
+afiseaza_zona_de_turism ()
+}
+class chenar_buton_numele_tarii {
+dimensiune
+nume_buton
+afiseaza_nume_buton ()
+afiseaza_dimensiunea ()
+click ()
+}
+class chenar_buton_language {
+dimensiune
+limba
+afiseaza_dimensiunea ()
+afiseaza_limba ()
+click ()
+}
+class chenar_buton_visiting_time {
+dimensiune
+timp_vizita
+afiseaza_dimensiunea ()
+afiseaza_timp_vizita ()
+click ()
+}
+fereastra_harta_tarii "1" *--- "1" harta_tarii
+fereastra_harta_tarii "1" *--- "1" chenar_buton_numele_tarii
+fereastra_harta_tarii "1" *--- "1" chenar_buton_language
+fereastra_harta_tarii "1" *--- "1" chenar_buton_visiting_time
+harta_tarii "1" *--- "1..*" zona_de_turism
+
+
+
+
+
+@enduml
